@@ -1,3 +1,4 @@
+import 'package:farmer_admin/ui/pages/common_widget/common_widget.dart';
 import 'package:flutter/material.dart';
 
 class Analytics extends StatefulWidget {
@@ -10,7 +11,13 @@ class Analytics extends StatefulWidget {
 class _AnalyticsState extends State<Analytics> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return  Scaffold(
+      body: Column(
+        children: [
+          CommonAppBar(title: ' Sale Analytics',),
+        ],
+      ),
+
 
     );
   }

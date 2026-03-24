@@ -14,7 +14,7 @@ class BottomScreen extends StatefulWidget {
 
 class _BottomScreenState extends State<BottomScreen> {
   List<Widget>screens=[
-    Home(), Users(),Farmer(),Analytics(),Settings(),
+    AdminDashboard(), Users(),Farmer(),Analytics(),Settings(),
 
   ];
   int current_index = 0;
@@ -38,7 +38,7 @@ class _BottomScreenState extends State<BottomScreen> {
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home),label: 'Home'),
             BottomNavigationBarItem(icon: Icon(Icons.people_alt),label: 'Users'),
-            BottomNavigationBarItem(icon: Icon(Icons.sailing),label: 'Farmer'),
+            BottomNavigationBarItem(icon: Icon(Icons.agriculture_rounded),label: 'Farmer'),
             BottomNavigationBarItem(icon: Icon(Icons.analytics),label: 'Analytics'),
             BottomNavigationBarItem(icon: Icon(Icons.person),label: 'Settings'),
           ],)
