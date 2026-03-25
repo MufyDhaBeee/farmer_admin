@@ -1,4 +1,5 @@
 import 'package:farmer_admin/ui/pages/common_widget/common_widget.dart';
+import 'package:farmer_admin/ui/pages/settings/settings_more.dart';
 import 'package:flutter/material.dart';
 
 class Settings extends StatefulWidget {
@@ -15,6 +16,79 @@ class _SettingsState extends State<Settings> {
       body: Column(
         children: [
           CommonAppBar(title: 'Profile'),
+          SingleChildScrollView(
+            child: Column(
+              children: [
+                const SizedBox(height: 20),
+
+                // PROFILE IMAGE + EDIT ICON
+                Stack(
+                  alignment: Alignment.bottomRight,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(4),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        //color: Colors.green.shade100,
+                        color: Color.fromRGBO(205, 242, 178, 1),
+                      ),
+                      child: const CircleAvatar(
+                        radius: 60,
+                        backgroundImage: AssetImage('assets/images/profile_img.png'),
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(10), topLeft: Radius.circular(10),
+                          bottomRight: Radius.circular(10),
+                        )
+                        //shape: BoxShape.circle,
+                      ),
+                      child: const Icon(Icons.edit, color: Colors.white, size: 18),
+                    )
+                  ],
+                ),
+
+                const SizedBox(height: 10),
+                const Text(
+                  "Admin",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: Color.fromRGBO(15, 87, 0 ,1),
+                  ),
+                ),
+                const SizedBox(height: 20),
+
+                // MENU CONTAINER
+                Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 20),
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Column(
+                    children: [
+                      menuTile(Icons.person_outline, "Edit Profile"),
+                      menuDivider(),
+                      menuTile(Icons.notifications_outlined, "Notifications"),
+                      menuDivider(),
+                      menuTile(Icons.settings_outlined, "Settings"),
+                      menuDivider(),
+                      menuTile(Icons.help_outline, "Help and Support"),
+                      menuDivider(),
+                      menuTile(Icons.logout, "Log Out", iconColor: Color.fromRGBO(156, 229, 101, 1)),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+
         ],
       ),
 

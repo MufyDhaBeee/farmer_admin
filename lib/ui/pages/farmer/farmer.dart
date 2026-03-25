@@ -15,6 +15,20 @@ class _FarmerState extends State<Farmer> {
       body: Column(
         children: [
           CommonAppBar(title: 'Farmer',),
+          SizedBox(height: 25,),
+          SearchBarContainer(),
+          SizedBox(height: 15,),
+          FilterButtons(),
+          SizedBox(height: 10,),
+          UserCard(
+            name: 'Ruben Workman',
+            location: 'West wing.room 402',
+            image: 'assets/images/farmer_image.png',
+            status: 'Active',
+            amount: 5201,
+            onTap: () {  },
+          ),
+
         ],
       ),
 
