@@ -1,3 +1,4 @@
+import 'package:farmer_admin/ui/pages/bott_nav/bott_nav.dart';
 import 'package:flutter/material.dart';
 
 
@@ -32,7 +33,14 @@ class CommonAppBar extends StatelessWidget implements PreferredSizeWidget {
                     ? Padding(
                   padding: const EdgeInsets.only(left: 12),
                   child: GestureDetector(
-                    onTap: () => Navigator.pop(context),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => BottomScreen(),
+                        ),
+                      );
+                    },
                     child: Container(
                       height: 40,
                       width: 40,
