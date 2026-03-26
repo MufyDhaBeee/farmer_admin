@@ -13,6 +13,7 @@ class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      backgroundColor: Color.fromRGBO(255, 255, 255, 1),
       body: Column(
         children: [
           CommonAppBar(title: 'Profile'),

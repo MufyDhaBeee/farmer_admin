@@ -12,6 +12,7 @@ class _FarmerState extends State<Farmer> {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      backgroundColor: Color.fromRGBO(255, 255, 255, 1),
       body: Column(
         children: [
           CommonAppBar(title: 'Farmer',),
